@@ -31,7 +31,7 @@ integrates the same queue and waits for queued work before exiting.
 
 Settlement is single-shot, including while adopting another native Promise.
 The implementation supports chaining, rejection recovery, `finally`, `all`,
-`race`, self-resolution rejection and uncaught-rejection reporting. `finally`
+`race`, self-resolution rejection and uncaught-rejection propagation. `finally`
 waits for cleanup and preserves its observable JavaScript job ordering. This
 is native Promise adoption, not an interpreter for arbitrary JavaScript
 thenable objects. A pending Promise alone does not keep a process alive;
