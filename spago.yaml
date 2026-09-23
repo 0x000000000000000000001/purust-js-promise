@@ -10,10 +10,15 @@ package:
   test:
     main: Test.Main
     dependencies:
+      - aff
       - assert
-      - refs
+      - js-promise-aff
       - maybe
+      - refs
 workspace:
+  backend:
+    cmd: ../purust/bin/purust
+    args: [--main, Test.Main, --source, output, --out, output/purust_output, --threaded]
   packageSet:
     registry: 77.7.0
   extraPackages:

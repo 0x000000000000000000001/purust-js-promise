@@ -9,3 +9,5 @@ package-lock.json
 output/
 output.bak/
 /generated-docs/
+
+.purmeta/
