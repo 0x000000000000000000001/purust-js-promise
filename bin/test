@@ -65,4 +65,6 @@ if ! grep -q 'Tests passed' output/actual.stdout; then
   echo "[FAILED] Promise tests did not reach the final marker" >&2
   exit 1
 fi
-echo "Summary: the native Promise tests passed."
+echo "=== Running the native Promise contract checks ==="
+node test/native-contract.mjs
+echo "Summary: the native Promise tests passed (Aff suite and native contract checks)."
